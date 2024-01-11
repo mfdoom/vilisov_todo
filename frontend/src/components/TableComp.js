@@ -58,6 +58,7 @@ const TableComp = () => {
       ...prevTodo,
       title: todo.title,
       description: todo.description,
+      status: todo.status,
       id: todo._id,
     }))
   }
@@ -169,7 +170,8 @@ const TableComp = () => {
             <div className="form-group">
               <label htmlFor="exampleFormControlSelect1">Example select</label>
               <select
-                onChange={handleStatusChange}
+                value={todo.status}
+                onChange={(e) => handleStatusChange(e)}
                 className="form-control"
                 id="exampleFormControlSelect1"
               >
