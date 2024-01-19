@@ -1,8 +1,9 @@
 import Todo from "../models/todoModel.js"
-
+let conc = 0
 const getTodos = async (req, res) => {
   try {
-    console.log("getTodos req GET")
+    conc++
+    console.log(c)
     const todos = await Todo.find({})
     res.status(200).json({ todos })
   } catch (error) {
