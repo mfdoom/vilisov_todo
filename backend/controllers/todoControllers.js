@@ -2,6 +2,7 @@ import Todo from "../models/todoModel.js"
 
 const getTodos = async (req, res) => {
   try {
+    console.log("getTodos req GET")
     const todos = await Todo.find({})
     res.status(200).json({ todos })
   } catch (error) {
